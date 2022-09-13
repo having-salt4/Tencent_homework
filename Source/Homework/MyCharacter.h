@@ -6,6 +6,7 @@
 #include "GameFramework/Character.h"
 #include "MyCharacter.generated.h"
 
+
 UCLASS()
 class HOMEWORK_API AMyCharacter : public ACharacter
 {
