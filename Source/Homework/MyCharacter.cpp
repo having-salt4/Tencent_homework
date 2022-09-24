@@ -38,7 +38,7 @@ void AMyCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompone
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 	// 处理发射投射物
-	PlayerInputComponent->BindAction("Fire2", IE_Pressed, this, &AMyCharacter::HandleFire);
+	//PlayerInputComponent->BindAction("Fire2", IE_Pressed, this, &AMyCharacter::HandleFire);
 
 }
 
@@ -138,4 +138,7 @@ void AMyCharacter::HandleFire_Implementation()
 	AProjectile* spawnedProjectile = GetWorld()->SpawnActor<AProjectile>(spawnLocation, spawnRotation, spawnParameters);
 	/*FString Message = FString::Printf(TEXT("1"));
 	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, Message);*/
+}
+void AMyCharacter::Fire() {
+	HandleFire();
 }

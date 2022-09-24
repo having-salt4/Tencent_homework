@@ -53,4 +53,6 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = "Health")
 		void  SetCurrentHealth(float healthValue, float armorValue);
+	UFUNCTION(BlueprintCallable)
+		void Fire();
 };
